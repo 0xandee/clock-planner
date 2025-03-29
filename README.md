@@ -1,54 +1,90 @@
-# React + TypeScript + Vite
+# Clock Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful, Studio Ghibli-inspired interactive daily planner with an analog clock interface. Plan your day visually by selecting time ranges directly on the clock face.
 
-Currently, two official plugins are available:
+![Clock Planner Screenshot](https://user-images.githubusercontent.com/your-username/clock-planner/screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo
 
-## Expanding the ESLint configuration
+Visit the live demo: [https://0xandee.github.io/clock-planner/](https://0xandee.github.io/clock-planner/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+-   Interactive analog clock interface for time selection
+-   Studio Ghibli-inspired visual design with warm, natural colors and textures
+-   Task management with drag-and-drop reordering
+-   Dark and light theme support
+-   Responsive design for various screen sizes
+-   Multi-day task support
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Technologies Used
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+-   React
+-   TypeScript
+-   Vite
+-   CSS with custom Studio Ghibli styling
+-   SVG for clock interface
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Local Development
+
+### Prerequisites
+
+-   Node.js (v18+)
+-   Yarn
+
+### Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/0xandee/clock-planner.git
+    cd clock-planner
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    yarn install
+    ```
+
+3. Start the development server:
+
+    ```bash
+    yarn dev
+    ```
+
+4. Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+## Deployment
+
+The application is deployed to GitHub Pages. To deploy updates:
+
+1. Make your changes to the codebase
+2. Commit and push the changes to GitHub
+3. Run the deploy script:
+
+    ```bash
+    yarn deploy
+    ```
+
+4. The changes will be visible at [https://0xandee.github.io/clock-planner/](https://0xandee.github.io/clock-planner/)
+
+## Project Structure
+
+-   `/src/components` - React components
+-   `/src/hooks` - Custom React hooks
+-   `/src/types` - TypeScript type definitions
+-   `/src/assets` - Static assets
+
+## Styling
+
+The application uses a custom Studio Ghibli-inspired theme with:
+
+-   Hand-drawn styling effects via SVG filters
+-   Warm, natural color palette
+-   Custom fonts (Neucha and Caveat)
+-   Paper-like textures and patterns
+
+## License
+
+MIT
